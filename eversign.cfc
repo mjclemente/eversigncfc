@@ -73,7 +73,8 @@ component displayname="eversigncfc"  {
 
   /**
   * @docs https://eversign.com/api/documentation/methods#create-template
-  * @hint //TODO Add create_template helper
+  //TODO Add create_template helper
+  * @hint Create a document template
   */
   public struct function createTemplate( required any template ) {
     var payload = isObject( template )
