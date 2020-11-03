@@ -117,7 +117,7 @@ Validates Eversign webhook events. *[Endpoint docs](https://eversign.com/api/doc
 
 ### Reference Manual for `helpers.create_document`
 
-This section documents every public method in the `helpers/create_document.cfc` file. Unless indicated, all methods are chainable.
+This section documents every public method in the `helpers/create_document.cfc` file. Unless indicated, all methods are chainable. To better understand how these work, you'll want to read the [documentation regarding the Create Document endpoint](https://eversign.com/api/documentation/methods#create-document).
 
 #### `addField( required struct field )`
 
@@ -253,7 +253,7 @@ Set to 1 in order to enable Signing Order for this document. Calling this withou
 
 ### Reference Manual for `helpers.use_template`
 
-This section documents every public method in the `helpers/use_template.cfc` file. Unless indicated, all methods are chainable.
+This section documents every public method in the `helpers/use_template.cfc` file. Unless indicated, all methods are chainable. To better understand how these work, you'll want to read the [documentation regarding the Use Template endpoint](https://eversign.com/api/documentation/methods#use-template).
 
 #### `addField( required struct field )`
 
