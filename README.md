@@ -38,10 +38,72 @@ document.sandbox()
 
 ### Reference Manual
 
-#### `listBusinesses()`
+#### `cancelDocument`
 
-Briefly explain what it does.
+Cancel document *[docs](https://eversign.com/api/documentation/methods#cancel-document)*
 
-#### `createDocument( required type argument )`
+#### `createDocument`
+
+Create a document *[docs](https://eversign.com/api/documentation/methods#create-document)*
+
+#### `createTemplate`
+
+//TODO Add create_template helper *[docs](https://eversign.com/api/documentation/methods#create-template)*
+
+#### `deleteDocument`
+
+Delete document. Please note that only cancelled documents and draft documents or templates can be deleted. *[docs](https://eversign.com/api/documentation/methods#delete-document)*
+
+#### `deleteTemplate`
+
+Delete template using the document/template hash *[docs](https://eversign.com/api/documentation/methods#delete-document)*
+
+#### `downloadAuditTrail`
+
+Convenience method for downloading the final document's audit trail.
+
+#### `downloadFinal`
+
+Download the final, signed version of the document *[docs](https://eversign.com/api/documentation/methods#download-final-pdf)*
+
+#### `downloadOriginal`
+
+Download the original PDF file *[docs](https://eversign.com/api/documentation/methods#download-original-pdf)*
+
+#### `getDocument`
+
+Retrieve a document (or template) by the document/template hash *[docs](https://eversign.com/api/documentation/methods#get-document-template)*
+
+#### `getFinalDownloadUrl`
+
+Convenience method for downloading the final document's download URL.
+
+#### `getTemplate`
+
+Retrieve a document (or template) by the document/template hash *[docs](https://eversign.com/api/documentation/methods#get-document-template)*
+
+#### `listBusinesses`
+
+A list of existing businesses on your eversign account *[docs](https://eversign.com/api/documentation/methods#list-businesses)*
+
+#### `listDocuments`
+
+List documents *[docs](https://eversign.com/api/documentation/methods#list-documents)*
+
+#### `listTemplates`
+
+List templates *[docs](https://eversign.com/api/documentation/methods#list-templates)*
+
+#### `sendReminder`
+
+Send reminder *[docs](https://eversign.com/api/documentation/methods#send-reminder)*
+
+#### `useTemplate`
+
+Use Template *[docs](https://eversign.com/api/documentation/methods#use-template)*
+
+#### `validateEventHash`
+
+Validates Eversign webhook events *[docs](https://eversign.com/api/documentation/webhooks#event-hashes)*
 
 ---
