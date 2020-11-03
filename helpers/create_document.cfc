@@ -338,7 +338,7 @@ component accessors="true" {
 
 
   /**
-  * @hint Support for onMissingMethod is not required, currently none of the properties are handled with custom methods
+  * @hint Assembles the JSON to send to the API. Generally, you shouldn't need to call this directly.
   */
   public string function build() {
 
