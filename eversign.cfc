@@ -116,7 +116,7 @@ component displayname="eversigncfc"  {
   /**
   * @docs https://eversign.com/api/documentation/methods#list-documents
   * @hint List documents
-  * @type Options are all, my_action_required, waiting_for_others, completed, drafts, cancelled
+  * @type options are all, my_action_required, waiting_for_others, completed, drafts, cancelled
   */
   public struct function listDocuments( string type = 'all' ) {
     return apiCall( 'GET', '/document', { 'type' = type } );
@@ -125,7 +125,7 @@ component displayname="eversigncfc"  {
   /**
   * @docs https://eversign.com/api/documentation/methods#list-templates
   * @hint List templates
-  * @type Options are templates, templates_archived, template_drafts
+  * @type options are templates, templates_archived, template_drafts
   */
   public struct function listTemplates( string type = 'templates' ) {
     return apiCall( 'GET', '/document', { 'type' = type } );
