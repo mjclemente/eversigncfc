@@ -51,15 +51,15 @@ component displayname="eversigncfc"  {
   }
 
   /**
-  * https://eversign.com/api/documentation/methods#list-businesses
-  * @hint List businesses
+  * @docs https://eversign.com/api/documentation/methods#list-businesses
+  * @hint A list of existing businesses on your eversign account
   */
   public struct function listBusinesses() {
     return apiCall( 'GET', '/business' );
   }
 
   /**
-  * https://eversign.com/api/documentation/methods#create-document
+  * @docs https://eversign.com/api/documentation/methods#create-document
   * @hint Create a document
   * @create_document expects an instance of the `helpers.create_document` component, but you can construct the struct/json yourself if you prefer
   */
@@ -72,7 +72,7 @@ component displayname="eversigncfc"  {
   }
 
   /**
-  * https://eversign.com/api/documentation/methods#create-template
+  * @docs https://eversign.com/api/documentation/methods#create-template
   * @hint //TODO Add create_template helper
   */
   public struct function createTemplate( required any template ) {
@@ -84,7 +84,7 @@ component displayname="eversigncfc"  {
   }
 
   /**
-  * https://eversign.com/api/documentation/methods#use-template
+  * @docs https://eversign.com/api/documentation/methods#use-template
   * @hint Use Template
   * @use_template expects an instance of the `helpers.use_template` component, but you can construct the struct/json yourself if you prefer
   */
@@ -97,19 +97,23 @@ component displayname="eversigncfc"  {
   }
 
   /**
-  * https://eversign.com/api/documentation/methods#get-document-template
-  * @hint Retrieve a document or template
+  * @docs https://eversign.com/api/documentation/methods#get-document-template
+  * @hint Retrieve a document (or template) by the document/template hash
   */
   public struct function getDocument( required string document_hash ) {
     return apiCall( 'GET', '/document', { "document_hash" = document_hash } );
   }
 
+  /**
+  * @docs https://eversign.com/api/documentation/methods#get-document-template
+  * @hint Retrieve a document (or template) by the document/template hash
+  */
   public struct function getTemplate( required string document_hash ) {
     return getDocument( document_hash );
   }
 
   /**
-  * https://eversign.com/api/documentation/methods#list-documents
+  * @docs https://eversign.com/api/documentation/methods#list-documents
   * @hint List documents
   * @type Options are all, my_action_required, waiting_for_others, completed, drafts, cancelled
   */
@@ -118,7 +122,7 @@ component displayname="eversigncfc"  {
   }
 
   /**
-  * https://eversign.com/api/documentation/methods#list-templates
+  * @docs https://eversign.com/api/documentation/methods#list-templates
   * @hint List templates
   * @type Options are templates, templates_archived, template_drafts
   */
@@ -127,7 +131,7 @@ component displayname="eversigncfc"  {
   }
 
   /**
-  * https://eversign.com/api/documentation/methods#send-reminder
+  * @docs https://eversign.com/api/documentation/methods#send-reminder
   * @hint Send reminder
   */
   public struct function sendReminder( required string document_hash, required numeric signer_id ) {
@@ -140,20 +144,23 @@ component displayname="eversigncfc"  {
   }
 
   /**
-  * https://eversign.com/api/documentation/methods#delete-document
-  * @hint Delete document
-  * Please note that only cancelled documents and draft documents or templates can be deleted.
+  * @docs https://eversign.com/api/documentation/methods#delete-document
+  * @hint Delete document. Please note that only cancelled documents and draft documents or templates can be deleted.
   */
   public struct function deleteDocument( required string document_hash ) {
     return apiCall( 'DELETE', '/document', { "document_hash" = document_hash } );
   }
 
+  /**
+  * @docs https://eversign.com/api/documentation/methods#delete-document
+  * @hint Delete template using the document/template hash
+  */
   public struct function deleteTemplate( required string document_hash ) {
     return deleteDocument( document_hash );
   }
 
   /**
-  * https://eversign.com/api/documentation/methods#cancel-document
+  * @docs https://eversign.com/api/documentation/methods#cancel-document
   * @hint Cancel document
   */
   public struct function cancelDocument( required string document_hash ) {
@@ -161,7 +168,7 @@ component displayname="eversigncfc"  {
   }
 
   /**
-  * https://eversign.com/api/documentation/methods#download-original-pdf
+  * @docs https://eversign.com/api/documentation/methods#download-original-pdf
   * @hint Download the original PDF file
   */
   public struct function downloadOriginal( required string document_hash ) {
@@ -169,7 +176,7 @@ component displayname="eversigncfc"  {
   }
 
   /**
-  * https://eversign.com/api/documentation/methods#download-final-pdf
+  * @docs https://eversign.com/api/documentation/methods#download-final-pdf
   * @hint Download the final, signed version of the document
   */
   public struct function downloadFinal( required string document_hash, boolean audit_trail = false, any document_id, boolean url_only = false ) {
@@ -188,16 +195,22 @@ component displayname="eversigncfc"  {
     return apiCall( 'GET', '/download_final_document', params );
   }
 
+  /**
+  * @hint Convenience method for downloading the final document's audit trail.
+  */
   public struct function downloadAuditTrail( required string document_hash ){
     return downloadFinal( document_hash = document_hash, document_id = 'AT' );
   }
 
+  /**
+  * @hint Convenience method for downloading the final document's download URL.
+  */
   public struct function getFinalDownloadUrl( required string document_hash, boolean audit_trail = false ){
     return downloadFinal( document_hash = document_hash, audit_trail = audit_trail, url_only = true );
   }
 
   /**
-  * https://eversign.com/api/documentation/webhooks#event-hashes
+  * @docs https://eversign.com/api/documentation/webhooks#event-hashes
   * @hint Validates Eversign webhook events
   */
   public boolean function validateEventHash( required string event_hash, required string event_time, required string event_type ){
