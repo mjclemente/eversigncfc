@@ -11,6 +11,7 @@ This project borrows heavily from the API frameworks built by [jcberquist](https
 ## Table of Contents
 
 - [Quick Start](#quick-start)
+- [Setup and Authentication](#setup-and-authentication)
 - [`eversigncfc` Reference Manual](#reference-manual)
 
 ### Quick Start
@@ -35,6 +36,12 @@ document.sandbox()
     "email" = "hello@notanexample.xyz"
   } );
 ```
+
+### Setup and Authentication
+
+To get started with the Eversign API, you'll need an [Access Key and Business ID](https://eversign.com/api/documentation/intro#api-access-key).
+
+Once you have these, you can provide them to this wrapper manually when creating the component, as in the Quick Start example above, or via an environment variables named `EVERSIGN_ACCESS_KEY` and `EVERSIGN_BUSINESS_ID`, which will get picked up automatically. This latter approach is generally preferable, as it keeps hardcoded credentials out of your codebase.
 
 ### Reference Manual
 
