@@ -37,6 +37,8 @@ document.sandbox()
     "name" = "Jo McSign",
     "email" = "hello@notanexample.xyz"
   } );
+
+writeDump( var='#eversign.createDocument( document )#' );
 ```
 
 ### Setup and Authentication
