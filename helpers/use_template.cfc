@@ -99,7 +99,7 @@ component accessors="true" {
   /**
   * @hint convenience method for setting the custom_requester_email
   */
-  public any function customrequesteremail( required string custom_requester_email ) {
+  public any function requesteremail( required string custom_requester_email ) {
     return this.custom_requester_email( custom_requester_email );
   }
 
