@@ -279,7 +279,7 @@ This parameter is used to specify an internal reference for your application, su
 
 #### `customrequesteremail( required string custom_requester_email )`
 
-convenience method for setting the custom_requester_email.
+This parameter can be used to specify a custom requester email address for this document. If used, all email communication related to this document and signing-related notifications will carry this email address as the requester (sender) email address.
 
 #### `customrequestername( required string custom_requester_name )`
 
@@ -325,6 +325,10 @@ This parameter is used to specify a custom completion redirect URL. If empty, th
 
 This parameter is used to specify a custom decline redirect URL. If empty, the default Post-Signature Decline URL specified in your eversign Business or the eversign signature declined page will be used.
 
+#### `requesteremail( required string custom_requester_email )`
+
+convenience method for setting the custom_requester_email.
+
 #### `requestername( required string custom_requester_name )`
 
 convenience method for setting the custom_requester_name.
@@ -352,6 +356,5 @@ convenience method for setting the template_id.
 #### `title( required string title )`
 
 This parameter is used in order to specify a document title.
-
 
 ---
