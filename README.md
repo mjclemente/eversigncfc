@@ -49,7 +49,7 @@ Once you have these, you can provide them to this wrapper manually when creating
 
 ### Reference Manual
 
-A full reference manual for all public methods can be found here [/docs/eversign.md]("/docs/eversign.md")
+A full reference manual for all public methods in `eversign.cfc`  can be found in the `docs` directory, [here](https://github.com/mjclemente/eversigncfc/blob/master/docs/eversign.md).
 ### Reference Manual for `helpers.create_document`
 
 This section documents every public method in the `helpers/create_document.cfc` file. Unless indicated, all methods are chainable. To better understand how these work, you'll want to read the [documentation regarding the Create Document endpoint](https://eversign.com/api/documentation/methods#create-document).
