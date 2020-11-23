@@ -5,7 +5,7 @@
 */
 component displayname="eversigncfc"  {
 
-  variables._eversigncfc_version = '1.0.2';
+  variables._eversigncfc_version = '1.0.3';
 
   public any function init(
       string access_key = '',
